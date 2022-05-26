@@ -60,6 +60,7 @@ form input {
   width: 50%;
   margin: 0 auto;
 }
+
 .todo {
   margin-top: 20px;
   background: white;
@@ -81,6 +82,16 @@ form input {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
+@media screen  and (min-width:320px) {
+  .todo_container{
+    width: 100%;
+  }
+  .todo{
+    width: 90%;
+    font-size: 10px;
+    display: flex;
+  }
+}
 .button-complete,
 .button-delete,
 .button-edit {
@@ -92,6 +103,15 @@ form input {
 }
 #i {
   font-size: 35px;
+}
+@media screen and (min-width:320px) {
+  #i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    white-space: nowrap;
+  }
 }
 .button-complete {
   color: #2de72d;
@@ -106,7 +126,7 @@ form input {
 }
 @media screen and (max-width: 667px) {
   .task_container {
-    width: 90%;
+    width: 80%;
   }
   .task {
     margin-right: 0px;
