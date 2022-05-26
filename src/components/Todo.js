@@ -38,7 +38,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,id
       setCounter(counter-1)
     }
     const UserDoc = doc(db,"todos",id)
-    const decrement = {counter : counter-1}
+    const decrement = {counter : counter -1}
     await updateDoc(UserDoc,decrement)
   }
   
@@ -75,7 +75,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,id
 
       {Number(counter)}
       </div>
-      <button className="button-delete" onClick={() => {handleDecrease(todo.id,todo.counter)}}>
+      <button className="button-delete" disabled={counter === 0}onClick={() => {handleDecrease(todo.id,todo.counter)}}>
         <RemoveCircle/>
       </button>
     </div>
