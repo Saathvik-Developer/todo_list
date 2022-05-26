@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -6,12 +6,10 @@ import { AddCircle } from "@mui/icons-material";
 import { RemoveCircle } from "@mui/icons-material";
 import "./todo.css"
 import {db} from "../firebase"
-import { addDoc, doc, FieldValue, getDoc, getDocs, updateDoc } from "firebase/firestore";
-import { collection } from "firebase/firestore";
+import { doc,updateDoc } from "firebase/firestore";
 export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,id}) {
   const [newTitle, setNewTitle] = React.useState(todo.title);
   const [counter,setCounter] = React.useState(todo.counter)
-  const dataCollectionRef = collection(db,"todos")
  
   
   
